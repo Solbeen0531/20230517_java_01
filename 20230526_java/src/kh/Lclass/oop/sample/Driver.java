@@ -24,6 +24,7 @@ public class Driver {
 	public void buy(Car c) { // 다운캐스팅
 		if (money > c.getPrice() /* 자동차 가격 */) {
 //			((Avante) c).moveAvante(); // 동적 바인딩
+			
 
 			if (c instanceof Sonata) {
 //				((Sonata) c).moveSonata(); // (Sonata)c.moveSonata(); c의 Sonata 형변환 후 moveSonata()접근

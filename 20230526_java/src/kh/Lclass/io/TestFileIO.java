@@ -1,5 +1,46 @@
 package kh.Lclass.io;
 
-public class TestFileIO {
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
+public class TestFileIO {
+	public void testfile() /* throws Exception */ {
+//		File f1 = new File("D:/data/aaa.txt"); 
+
+//		File f1 = new File("D:/data1/aaa.txt");
+//		f1.mkdirs(); // 디렉토리 생성
+
+		String path = "D:/data2/test";
+		String filename = "aaa.txt";
+
+		new File(path).mkdirs();
+		File f2 = new File(path, filename);
+
+//		Unhandled exception type IOException
+
+		FileWriter fw = null;
+
+		try {
+			f2.createNewFile(); // 파일 생성
+
+			fw = new FileWriter(f2);
+			fw.write("abcdefg");
+			fw.flush();
+			return;
+
+		} catch (IOException e) {
+			System.out.println("cannot create file");
+			e.printStackTrace();
+
+		} finally {
+			try {
+				if(fw != null) { fw.close();}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			
+		}
+
+	}
 }
