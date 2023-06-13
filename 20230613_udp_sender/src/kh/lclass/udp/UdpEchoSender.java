@@ -74,7 +74,7 @@ public class UdpEchoSender {
 //			System.out.println(receiveData.getAddress()); // 전달받은 메시지의 발신 ip
 //			System.out.println(receiveData.getPort()); // 전달받은 메시지의 발신 port
 			String receivedStr = new String(receiveData.getData());
-			System.out.println("수신 메시지 : " + receivedStr);
+			System.out.println("Echo 메시지 : " + receivedStr);
 			}
 		 } catch (SocketException e) {
 			e.printStackTrace();
@@ -82,13 +82,12 @@ public class UdpEchoSender {
 			e.printStackTrace();
 		} finally {
 			try {
-				if (dSock != null)
-					dSock.close();
-			
-			} catch (Exception e ) {
+				if(br != null) br.close();
+			} catch (IOException e) {
 				e.printStackTrace();
 			}
+			if (dSock != null)	dSock.close();
 		}
-	}
 
+	}
 }
