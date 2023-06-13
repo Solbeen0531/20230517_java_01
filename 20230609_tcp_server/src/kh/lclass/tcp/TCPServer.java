@@ -29,8 +29,10 @@ public class TCPServer {
 
 				System.out.println("클라이언트 접속 대기 중............");
 				// 3. 클라이언트 쪽에서 접속 요청이 오길 기다림
+				
 				// 4. 접속 요청이 오면 요청 수락 후 해당 클라이언트에 대한 소켓 객체 생성
 				sc = ss.accept();
+				
 				System.out.println("나의 Port: " + sc.getLocalPort()); // 9001
 				System.out.println("서버 Port: " + sc.getPort()); // 
 
@@ -43,16 +45,25 @@ public class TCPServer {
 				wr = new BufferedWriter(new OutputStreamWriter(out));
 
 				String receivedMsg = null;
-
-				while ((receivedMsg = br.readLine()) != null) {
-					wr.write("반가워용.");
-					wr.flush();
-
+				
+				// 방법 1. do - while
+				do {
 					receivedMsg = br.readLine();
 					System.out.println("받은 메시지 : " + receivedMsg);
-					wr.write(receivedMsg+" 메시지 잘 받았음.\n");
+					wr.write(receivedMsg + " 메시지 잘 받았음.\n");
 					wr.flush();
-				}
+				} while(receivedMsg != null);				
+				
+				// 방법 2. while
+//				while ((receivedMsg = br.readLine()) != null) {
+//					wr.write("반가워용.");
+//					wr.flush();
+//
+//					receivedMsg = br.readLine();
+//					System.out.println("받은 메시지 : " + receivedMsg);
+//					wr.write(receivedMsg+" 메시지 잘 받았음.\n");
+//					wr.flush();
+//				}
 
 			}
 
