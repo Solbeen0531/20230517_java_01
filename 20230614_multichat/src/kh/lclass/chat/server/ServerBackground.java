@@ -50,7 +50,7 @@ public class ServerBackground {
 
 	// 클라이언트가 접속하면 그 정보를 display 해주는 메소드
 	public void addClient(String nickname) {
-		gui.appendMsg(nickname + "님이 접속했습니다");
+		gui.appendMsg(nickname + "님이 접속했습니다\n");
 	}
 
 	// private ServerGUI gui;
@@ -109,18 +109,19 @@ public class ServerBackground {
 			// client와 입력 통로가 끊어지지 않았다면 계속 반복 확인함
 			// client에서 수신받은 msg
 			// 클라이언트마다 각각에서 전달되오는 메시지 확인하고 화면에 출력
-			while (br != null) {
-
-				try {
+			try {
+				// 반복문과 try-catch 위치 수정함.
+				while(br != null) {
 					String msg = br.readLine();
 					gui.appendMsg(msg);
 					// client map 모두에게 접속 정보 전달
 					sendMessage(msg);
-				} catch (IOException e) {
+				}
+			} catch (IOException e) {
 					e.printStackTrace();
 				}
 
 			}
 		}
-	}
+	
 }

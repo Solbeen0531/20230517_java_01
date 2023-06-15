@@ -7,7 +7,7 @@ public class ClientRun {
 
 		// 사용자 nickname을 GUI를 통해서 입력 받음
 		String nickName = JOptionPane.showInputDialog("닉네임을 입력해주세요");
-		Client ClientGUI = new ClientGUI(nickName); // 객체 생성 --> 생성자에 화면초기화 및 시각화 visible
+		new ClientGUI(nickName); // 객체 생성 --> 생성자에 화면초기화 및 시각화 visible
 
 	}
 }

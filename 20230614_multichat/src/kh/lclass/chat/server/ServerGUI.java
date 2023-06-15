@@ -42,8 +42,7 @@ public class ServerGUI extends JFrame implements ActionListener {
 	// TODO 새 메시지를 받았을 때 메소드 호출됨
 	public void appendMsg(String msg) {
 		// jta (채팅 창) 에 msg로 입력받아오는 메시지를 추가하고 display함
-		jta.append(msg);
-		jta.append(msg);
+		jta.append(msg+"\n");
 	}
 
 	@Override

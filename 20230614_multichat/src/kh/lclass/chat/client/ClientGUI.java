@@ -22,10 +22,7 @@ public class ClientGUI extends JFrame implements ActionListener {
 
 	public ClientGUI(String nickname) {
 		this.nickName = nickname; //
-		cb.setNickname(nickname);
-		cb.connection();
-
-		cb.setGui(this);
+		
 
 		// 생성자에서는 초기화 (즉, 화면 초기화)
 		setBounds(200, 100, 400, 400); // 창이 뜨는 위치와 크기 설정 / setBounds(EXIT_ON_CLOSE, ABORT, WIDTH, HEIGHT);
@@ -40,7 +37,11 @@ public class ClientGUI extends JFrame implements ActionListener {
 
 		jtf.addActionListener(this);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-
+		
+		cb.setNickname(nickname);
+		cb.connection();
+		cb.setGui(this);
+		
 		setVisible(true);
 
 	}
