@@ -33,11 +33,13 @@ public class TestFileIO {
 			oos.writeObject(p1);
 			oos.writeObject(p2);
 			oos.flush();
+			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 
 		} catch (IOException e) {
 			e.printStackTrace();
+			
 		} finally {
 			try {
 				if (oos != null)
