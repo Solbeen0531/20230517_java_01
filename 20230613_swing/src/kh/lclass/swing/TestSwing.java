@@ -12,6 +12,8 @@ import javax.swing.JTextField;
 
 public class TestSwing extends JFrame {
 
+	private static final long serialVersionUID = 5576186148976364060L;
+
 	public TestSwing() {
 		setTitle("title : Hello Window _ Frame");
 //		setDefaultCloseOperation(EXIT_ON_CLOSE); // [Close] 버튼 눌러서 resource 정리하고 창 닫기
