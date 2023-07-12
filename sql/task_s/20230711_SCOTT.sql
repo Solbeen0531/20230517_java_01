@@ -204,9 +204,6 @@ SELECT *
 --SCOTT 연습문제
 --연습문제 19번
 --오늘 날짜에서 년도만 추출
---test
-SELECT *
- FROM EMP;
 --answer
 SELECT EXTRACT(YEAR FROM SYSDATE)
  FROM DUAL;
