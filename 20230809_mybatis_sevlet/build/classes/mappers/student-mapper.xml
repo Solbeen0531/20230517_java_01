@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="student1">
+
+	<resultMap type="StudentDto2" id="resultMapDept3">
+		<id property="studentNo" column="STUDENT_NO" />
+
+		<result property="studentName" column="STUDENT_NAME" />
+		<result property="studentSsn" column="STUDENT_SSN" />
+		<result property="studentAddress" column="STUDENT_ADDRESS" />
+		<result property="entranceDate" column="ENTRANCE_DATE" />
+		<result property="absenceYn" column="ABSENCE_YN" />
+		<result property="coachProfessorNo" column="COACH_PROFESSOR_NO" />
+	</resultMap>
+
+
+	<select id="selectList0" resultMap="resultMap3" >
+		SELECT student_No, department_No, student_Name, student_Ssn, student_Address, 
+			to_char(entrance_Date, 'yyyy-mm-dd'), absence_Yn, coach_Professor_No
+		FROM TB_student
+	</select>
+
+	<select id="selectOne0" resultMap="resultMap3" parameterType="string" >
+		SELECT student_No, department_No, student_Name, student_Ssn, student_Address, 
+			to_char(entrance_Date, 'yyyy-mm-dd'), absence_Yn, coach_Professor_No
+		FROM TB_student
+		WHERE student_No = #{anyname}
+	</select>
+
+	<insert id="insert0" parameterType="StudentVo2">
+		INSERT INTO TB_student (student_No, department_No, student_Name, student_Ssn, student_Address, 
+			entrance_Date, absence_Yn, coach_Professor_No)
+		VALUES (#{studentNo},#{departmentNo},#{studentName}, #{studentSsn}, #{studentAddress},
+				to_date(#{entranceDate}, 'yyyy-mm-dd'),#{absenceYn},#{coachProfessorNo}
+		)
+	</insert>
+</mapper>
+
