@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="kh.lclass.db1">
+	<logger name="kh.lclass.db2">
 		<level value="info" />
 	</logger>
 	
