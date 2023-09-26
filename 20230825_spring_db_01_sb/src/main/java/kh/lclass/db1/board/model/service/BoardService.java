@@ -13,24 +13,24 @@ public class BoardService {
 	@Autowired
 	private BoardDao boardDao;
 
-	public List<BoardVo> selectList() {
+	public List<BoardVo> selectList() throws Exception {
 		return boardDao.selectList();
 	}
 
-	public BoardVo selectOne(int bno) {
+	public BoardVo selectOne(int bno) throws Exception {
 		return boardDao.selectOne(bno);
 	}
 
-	public int insert(BoardVo vo) {
+	public int insert(BoardVo vo) throws Exception {
 		boardDao.update(vo);
 		return boardDao.insert(vo);
 	}
 
-	public int update(BoardVo vo) {
+	public int update(BoardVo vo) throws Exception {
 		return boardDao.update(vo);
 	}
 
-	public int delete(int bno) {
+	public int delete(int bno) throws Exception {
 		return boardDao.delete(bno);
 	}
 }
