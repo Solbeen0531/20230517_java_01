@@ -7,6 +7,17 @@
 <title>board list</title>
 </head>
 <body>
+<script>
+// step 3
+	var msg = '${msg}';
+	if(msg){
+		alert(msg);
+	}
+	var msg = '$msg2';
+	if(msg){
+		alert(msg);
+	}
+</script>
 <h2>Board list</h2>
 [[
 ${boardList }
