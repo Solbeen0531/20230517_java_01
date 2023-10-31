@@ -60,10 +60,10 @@ public class AirPollutionJavaApp {
 			// 각각의 item 정보를 => AirVo 객체에 담고 => ArrayList에 쌓기
 			
 			// responseText에 담긴 문자열을 JsonObject객체로 변경
-			JsonObject totalObj = 
-					JsonParser.parseString(responseText).getAsJsonObject();
+//			JsonObject totalObj = 
+//					JsonParser.parseString(responseText).getAsJsonObject();
 			
-			JsonObject responseObj = totalObj.getAsJsonObject("response");
+//			JsonObject responseObj = totalObj.getAsJsonObject("response");
 			// response속성 접근 => 응답데이터 {}에 있는 내용들을 JsonObject화
 				// System.out.println(responseObj); 출력 확인 후 주석
 			

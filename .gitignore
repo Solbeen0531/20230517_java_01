@@ -23,3 +23,19 @@ bin/
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+/.metadata/
+Servers/.project
+Servers/.settings/org.eclipse.wst.server.core.prefs
+Servers/Tomcat v9.0 Server at localhost-config/catalina.policy
+Servers/Tomcat v9.0 Server at localhost-config/catalina.properties
+Servers/Tomcat v9.0 Server at localhost-config/context.xml
+Servers/Tomcat v9.0 Server at localhost-config/server.xml
+Servers/Tomcat v9.0 Server at localhost-config/tomcat-users.xml
+Servers/Tomcat v9.0 Server at localhost-config/web.xml
+20230824_spring_db_01_sb/.classpath
+20230825_spring_db_01_sb/.classpath
+20230825_spring_db_01_sb/.settings/org.eclipse.wst.common.project.facet.core.xml
+20230825_spring_db_01_sb/target/m2e-wtp/web-resources/META-INF/maven/kh.lclass/db1/pom.properties
+*.prefs
+openDataProject/.settings/org.eclipse.wst.common.project.facet.core.xml
+openDataProject/.settings/org.eclipse.wst.common.component
